@@ -15,9 +15,9 @@ export default class App extends React.Component {
                 if (res.ok) {
                     alert(res.body.message);
                 } else if (res.forbidden) {
-                    alert('forbidden')
+                    alert('forbidden');
                 } else {
-                    alert(`error:${res.status}`)
+                    alert(`error:${res.status}`);
                 }
             });
     }
@@ -33,9 +33,9 @@ export default class App extends React.Component {
                     if (res.ok) {
                         alert(res.body.message);
                     } else if (res.forbidden) {
-                        alert('forbidden')
+                        alert('forbidden');
                     } else {
-                        alert(`error:${res.status}`)
+                        alert(`error:${res.status}`);
                     }
                 });
         } else {
