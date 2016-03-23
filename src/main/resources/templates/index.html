@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div id="container"></div>
+    <form th:action="@{/logout}" method="POST" id="logoutForm">
+      <button type="submit">Logout</button>
+    </form>
+    <script th:src="@{/js/dist/bundle.js}"></script>
+  </body>
+</html>
