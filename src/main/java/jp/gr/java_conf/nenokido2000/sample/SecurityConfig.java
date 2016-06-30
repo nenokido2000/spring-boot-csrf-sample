@@ -23,6 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("USER");
     }
 
+    /*
+     * { @inheritDoc }
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated();
@@ -37,6 +40,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .deleteCookies("JSESSIONID").invalidateHttpSession(true);
 
         http.addFilterAfter(new CsrfCookieFilter(), CsrfFilter.class);
-
     }
 }
